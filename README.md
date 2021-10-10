@@ -1,6 +1,7 @@
 # Portuguei
 Uma cópia do Portugol para fins educacionais.<br>
-Desenvolvido em C# usando .NET Core.
+Desenvolvido em C# usando .NET Core.<br>
+Atualmente apenas para Windows.
 
 O código ainda é simples, não leve o projeto a sério.
 
