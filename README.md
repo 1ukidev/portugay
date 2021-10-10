@@ -23,7 +23,7 @@ Usar o programa para traduzir e compilar:
 
 Agora basta executar o binário gerado:
 ```
-.\resultado.exe
+.\<arquivo>.exe
 ```
 
 Saída:
