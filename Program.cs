@@ -28,7 +28,7 @@ namespace PseudoCode
                 text = text.Replace("escreva", "cout");
                 text = text.Replace("leia", "cin");
                 text = text.Replace("terminar", "}");
-                text = text.Replace("retorna", "return");
+                text = text.Replace("retornar", "return");
                 text = text.Replace("sistema", "system");
 
                 // Escrever no arquivo
