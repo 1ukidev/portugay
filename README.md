@@ -21,7 +21,7 @@ Usar o programa para traduzir e compilar:
 .\portuguei.exe <arquivo>
 ```
 
-Agora basta executar:
+Agora basta executar o binário gerado:
 ```
 .\resultado.exe
 ```
