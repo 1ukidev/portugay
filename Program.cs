@@ -17,7 +17,7 @@ namespace Portuguei
             {
                 // Ler o código
                 string text = File.ReadAllText(path);
-                // Inserir código necessário no arquivo
+                // Inserir código C++ necessário no arquivo
                 text = text.Insert(0, "#include <iostream>\n#include <stdlib.h>\n\nusing namespace std;\n\n");
 
                 // Substituir o código pelo equivalente em C++
