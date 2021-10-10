@@ -2,7 +2,7 @@
 Uma cópia do Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.
 
-O código ainda é bem simples, não leve o projeto a sério.
+O código ainda é simples, não leve o projeto a sério.
 
 ### Funcionamento:
 O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando GCC.
