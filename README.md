@@ -16,12 +16,12 @@ iniciar
 terminar
 ```
 
-Traduzir e compilar:
+Usar o programa para traduzir e compilar:
 ```
 .\portuguei.exe <arquivo>
 ```
 
-Executar:
+Agora basta executar:
 ```
 .\resultado.exe
 ```
