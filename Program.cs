@@ -14,7 +14,7 @@ namespace Portuguei
             string path = Path.GetFullPath(file[0]);
  
             // Verificar se o caminho do arquivo é valido
-            if(path != null)
+            if(Directory.Exists(path))
             {
                 // Ler o código
                 string text = File.ReadAllText(path);
@@ -48,7 +48,7 @@ namespace Portuguei
             }
             else
             {
-                Console.WriteLine("Tem algo errado.\n");
+                Console.WriteLine("Arquivo não encontrado.\n");
             }
         }
     }
