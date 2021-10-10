@@ -1,11 +1,11 @@
 # Portuguei
-Uma cópia barata do Portugol para fins educacionais.<br>
+Uma cópia do Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.
 
 O código ainda é bem simples, não leve o projeto a sério.
 
 ### Funcionamento:
-O programa recebe o texto, traduz para C++ e por fim compila usando GCC.
+O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando GCC.
 
 ---
 
@@ -23,13 +23,15 @@ Usar o programa para traduzir e compilar:
 
 Agora basta executar o binário gerado:
 ```
-.\<arquivo>.exe
+.\<nome do arquivo>.exe
 ```
 
 Saída:
 ```
 Hello, World!
 ```
+
+O arquivo com código traduzido ficará em ``<nome do arquivo>.cpp``
 
 ---
 
@@ -39,8 +41,8 @@ Hello, World!
 | `inteiro`            | `int`                         |
 | `real`               | `float`                       |
 | `vazio`              | `void`                        |
-| `escreva <<`         | `cout <<`                     |
-| `leia >>`            | `cin >>`                      |
+| `escreva`            | `cout <<`                     |
+| `leia`               | `cin >>`                      |
 | `terminar`           | `}`                           |
 | `retornar`           | `return`                      |
 | `sistema()`          | `system()`                    |
