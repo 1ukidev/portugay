@@ -10,7 +10,7 @@ namespace Portuguei
     {
         static void Main(string[] file)
         {
-            // Pegar o caminho do arquivo
+            // Guardar o caminho do arquivo que foi passado como argumento
             string path = Path.GetFullPath(file[0]);
  
             // Verificar se o caminho do arquivo é valido
