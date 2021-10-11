@@ -13,8 +13,8 @@ namespace Portuguei
             // Guardar o caminho do arquivo que foi passado como argumento
             string path = Path.GetFullPath(file[0]);
  
-            // Verificar se o caminho do arquivo é valido
-            if(Directory.Exists(path))
+            // Verificar se o arquivo é valido
+            if(File.Exists(file[0]))
             {
                 // Ler o código
                 string text = File.ReadAllText(path);
