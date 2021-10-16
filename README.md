@@ -1,5 +1,5 @@
 # Portuguei
-Uma cópia do Portugol para fins educacionais.<br>
+Um programa inspirado no Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.<br>
 Funciona no Linux e Windows.
 
@@ -19,7 +19,7 @@ terminar
 
 Usar o programa para traduzir e compilar:
 ```
-.\portuguei.exe <arquivo>
+.\Portuguei.exe <arquivo>
 ```
 
 Agora basta executar o binário gerado:
@@ -32,7 +32,17 @@ Saída:
 Hello, World!
 ```
 
-O arquivo com código traduzido ficará em ``<nome do arquivo>.cpp``
+---
+
+No Linux:
+```
+./Portuguei <arquivo>
+./<nome do arquivo>
+```
+
+---
+
+O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 
 ---
 
@@ -47,3 +57,23 @@ O arquivo com código traduzido ficará em ``<nome do arquivo>.cpp``
 | `terminar`           | `}`                           |
 | `retornar`           | `return`                      |
 | `sistema()`          | `system()`                    |
+
+---
+
+### Como compilar o projeto:
+- Certifique-se de ter instalado o .NET SDK
+
+Abra um terminal e clone este repositório:
+```
+git clone https://github.com/1ukidev/portuguei
+```
+
+Entre dentro do diretório ``Portuguei`` e execute:
+```
+dotnet build
+```
+
+Para atualizar o código-fonte para o commit mais recente:
+```
+git pull
+```
