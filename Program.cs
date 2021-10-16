@@ -33,10 +33,12 @@ namespace Portuguei
                 // Criar arquivo que receberá o código C++
                 if(System.OperatingSystem.IsLinux())
                 {
+                    // Linux
                     path = Path.GetDirectoryName(path) + "/" + filename + ".cpp";
                 }
                 else
                 {
+                    // Windows
                     path = Path.GetDirectoryName(path) + @"\\" + filename + ".cpp";
                 }
 
@@ -60,12 +62,14 @@ namespace Portuguei
                 // Compilar usando GCC
                 if(System.OperatingSystem.IsLinux())
                 {
+                    // Linux
                     ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/g++", Arguments = "-Ofast -pipe " + path + " -o " + filename }; 
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                 }
                 else
                 {
+                    // Windows
                     ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -Ofast -pipe " + path + " -o " + filename }; 
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
