@@ -1,7 +1,7 @@
 # Portuguei
 Um programa inspirado no Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.<br>
-Funciona no Linux e Windows.
+Atualmente funciona no Linux e Windows.
 
 O código ainda é simples, não leve o projeto a sério.
 
@@ -17,7 +17,7 @@ iniciar
 terminar
 ```
 
-Usar o programa para traduzir e compilar:
+Usar o programa para traduzir e compilar (necessário ter o GCC instalado):
 ```
 .\Portuguei.exe <arquivo>
 ```
@@ -63,7 +63,7 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 ### Como compilar o projeto:
 - Certifique-se de ter instalado o .NET SDK
 
-Abra um terminal e clone este repositório:
+Abra um terminal e clone este repositório (necessário ter o git instalado):
 ```
 git clone https://github.com/1ukidev/portuguei
 ```
