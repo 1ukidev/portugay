@@ -1,7 +1,7 @@
 # Portuguei
 Uma cópia do Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.<br>
-Atualmente apenas para Windows.
+Funciona no Linux e Windows.
 
 O código ainda é simples, não leve o projeto a sério.
 
@@ -13,7 +13,7 @@ O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila 
 Exemplo de código:
 ```
 iniciar
-    escreva << "Hello, World!\n";
+    escreva "Hello, World!\n";
 terminar
 ```
 

@@ -3,6 +3,7 @@
 
 using System;
 using System.IO;
+using System.Diagnostics;
 
 namespace Portuguei
 {
@@ -10,10 +11,17 @@ namespace Portuguei
     {
         static void Main(string[] file)
         {
-            // Guardar o caminho do arquivo que foi passado como argumento
+            // Verificar se o argumento foi passado
+            if(file == null || file.Length == 0)
+            {
+                Console.WriteLine("Nenhum arquivo foi passado.");
+                Environment.Exit(0);
+            }
+
+            // Guardar o caminho do arquivo
             string path = Path.GetFullPath(file[0]);
  
-            // Verificar se o arquivo é valido
+            // Verificar se o arquivo existe
             if(File.Exists(file[0]))
             {
                 // Ler o código
@@ -23,7 +31,14 @@ namespace Portuguei
                 string filename = Path.GetFileNameWithoutExtension(path);
 
                 // Criar arquivo que receberá o código C++
-                path = Path.GetDirectoryName(path) + @"\\" + filename + ".cpp";
+                if(System.OperatingSystem.IsLinux())
+                {
+                    path = Path.GetDirectoryName(path) + "/" + filename + ".cpp";
+                }
+                else
+                {
+                    path = Path.GetDirectoryName(path) + @"\\" + filename + ".cpp";
+                }
 
                 // Inserir código C++ necessário
                 text = text.Insert(0, "#include <iostream>\n#include <stdlib.h>\n\nusing namespace std;\n\n");
@@ -42,13 +57,23 @@ namespace Portuguei
                 // Escrever no novo arquivo
                 File.WriteAllText(path, text);
                 
-                // Abrir o CMD e compilar usando GCC
-                string compile = "/C g++ -Ofast -pipe " + path + " -o " + filename + ".exe";
-                System.Diagnostics.Process.Start("cmd.exe", compile);
+                // Compilar usando GCC
+                if(System.OperatingSystem.IsLinux())
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/g++", Arguments = "-Ofast -pipe " + path + " -o " + filename }; 
+                    Process proc = new Process() { StartInfo = startInfo };
+                    proc.Start();
+                }
+                else
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -Ofast -pipe " + path + " -o " + filename }; 
+                    Process proc = new Process() { StartInfo = startInfo };
+                    proc.Start();
+                }
             }
             else
             {
-                Console.WriteLine("Arquivo não encontrado.\n");
+                Console.WriteLine("Arquivo não encontrado.");
             }
         }
     }
