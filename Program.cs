@@ -63,14 +63,14 @@ namespace Portuguei
                 if(System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/g++", Arguments = "-Ofast -pipe " + path + " -o " + filename }; 
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/g++", Arguments = "-O3 -pipe " + path + " -o " + filename }; 
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                 }
                 else
                 {
                     // Windows
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -Ofast -pipe " + path + " -o " + filename + ".exe" };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -O3 -pipe " + path + " -o " + filename + ".exe" };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                 }
