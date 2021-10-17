@@ -73,7 +73,7 @@ Entre dentro do diretório ``Portuguei`` e execute:
 dotnet build
 ```
 
-Para atualizar o código-fonte para o commit mais recente:
+Para atualizar o código-fonte para o commit mais recente, execute:
 ```
 git pull
 ```
