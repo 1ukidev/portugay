@@ -42,18 +42,30 @@ namespace Portuguei
                     path = Path.GetDirectoryName(path) + @"\\" + filename + ".cpp";
                 }
 
-                // Inserir código C++ necessário
+                // Inserir cabeçalhos e definir namespace
                 text = text.Insert(0, "#include <iostream>\n#include <stdlib.h>\n\nusing namespace std;\n\n");
 
                 // Substituir o código pelo equivalente em C++
+                // Função principal
                 text = text.Replace("iniciar", "int main(void) {");
+                text = text.Replace("terminar", "}");
+                // Variáveis
                 text = text.Replace("inteiro", "int");
                 text = text.Replace("real", "float");
                 text = text.Replace("vazio", "void");
+                text = text.Replace("caractere", "char");
+                // Entrada / Saída
                 text = text.Replace("escreva", "cout <<");
                 text = text.Replace("leia", "cin >>");
-                text = text.Replace("terminar", "}");
                 text = text.Replace("retornar", "return");
+                // Estruturas de repetição
+                text = text.Replace("para", "for");
+                text = text.Replace("enquanto", "while");
+                text = text.Replace("faca", "do");
+                // Estruturas de decisão
+                text = text.Replace("se", "if");
+                text = text.Replace("senao", "else");
+                // Outros
                 text = text.Replace("sistema", "system");
 
                 // Escrever no novo arquivo
