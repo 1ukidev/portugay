@@ -65,7 +65,7 @@ namespace Portuguei
                 // Estruturas de decisão
                 text = text.Replace("se", "if");
                 text = text.Replace("senao", "else");
-                // Funç
+                // Funções
                 text = text.Replace("sistema", "system");
 
                 // Escrever no novo arquivo
