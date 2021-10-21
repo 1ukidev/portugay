@@ -5,6 +5,8 @@ Atualmente funciona no Linux e Windows.
 
 O código ainda é simples, não leve o projeto a sério.
 
+---
+
 - [Funcionamento](#funcionamento)
 
 ### Funcionamento:
