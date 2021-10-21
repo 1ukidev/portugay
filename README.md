@@ -7,8 +7,6 @@ O código ainda é simples, não leve o projeto a sério.
 
 ---
 
-- [Funcionamento](#funcionamento)
-
 ### Funcionamento:
 O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando GCC.
 
