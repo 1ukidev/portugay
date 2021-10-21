@@ -5,6 +5,8 @@ Atualmente funciona no Linux e Windows.
 
 O código ainda é simples, não leve o projeto a sério.
 
+- [Funcionamento](#funcionamento)
+
 ### Funcionamento:
 O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando GCC.
 
@@ -48,16 +50,22 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 
 | Comandos disponíveis | Equivalente em C++            |
 | -------------------  | ----------------------------- |
-| `iniciar`            | `int main(void) {`            |
-| `inteiro`            | `int`                         |
-| `real`               | `float`                       |
-| `vazio`              | `void`                        |
-| `escreva`            | `cout <<`                     |
-| `leia`               | `cin >>`                      |
-| `terminar`           | `}`                           |
-| `retornar`           | `return`                      |
-| `sistema()`          | `system()`                    |
-
+| ``iniciar``          | ``int main(void) {``          |
+| ``terminar``         | ``}``                         |
+| ``inteiro``          | ``int``                       |
+| ``real``             | ``float``                     |
+| ``vazio``            | ``void``                      |
+| ``caractere``        | ``char``                      |
+| ``escreva``          | ``cout <<``                   |
+| ``leia``             | ``cin >>``                    |
+| ``retornar``         | ``return``                    |
+| ``para``             | ``for``                       |
+| ``enquanto``         | ``while``                     |
+| ``faca``             | ``do``                        |
+| ``se``               | ``if``                        |
+| ``senao``            | ``else``                      |
+| ``sistema()``        | ``system()``                  |
+ 
 ---
 
 ### Como compilar o projeto:
