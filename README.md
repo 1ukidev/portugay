@@ -1,4 +1,4 @@
-# Portuguei
+# Portugay
 Um programa inspirado no Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.<br>
 Atualmente funciona no Linux e Windows.
