@@ -21,7 +21,7 @@ terminar
 
 Usar o programa para traduzir e compilar (necessário ter o GCC instalado):
 ```
-.\Portuguei.exe <arquivo>
+.\Portugay.exe <arquivo>
 ```
 
 Agora basta executar o binário gerado:
@@ -38,7 +38,7 @@ Hello, World!
 
 No Linux:
 ```
-./Portuguei <arquivo>
+./Portugay <arquivo>
 ./<nome do arquivo>
 ```
 
@@ -73,10 +73,10 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 
 Abra um terminal e clone este repositório (necessário ter o git instalado):
 ```
-git clone https://github.com/1ukidev/portuguei
+git clone https://github.com/1ukidev/portugay
 ```
 
-Entre dentro do diretório ``Portuguei`` e execute:
+Entre dentro do diretório ``Portugay`` e execute:
 ```
 dotnet build
 ```

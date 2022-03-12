@@ -5,7 +5,7 @@ using System;
 using System.IO;
 using System.Diagnostics;
 
-namespace Portuguei
+namespace Portugay
 {
     class Program
     {
