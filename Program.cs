@@ -78,6 +78,7 @@ namespace Portugay
                     ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/g++", Arguments = "-O3 -pipe " + path + " -o " + filename }; 
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
+                    proc.WaitForExit();
                 }
                 else
                 {
@@ -85,6 +86,7 @@ namespace Portugay
                     ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -O3 -pipe " + path + " -o " + filename + ".exe" };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
+                    proc.WaitForExit();
                 }
             }
             else
