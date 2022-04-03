@@ -92,6 +92,7 @@ namespace Portugay
             else
             {
                 Console.WriteLine("Arquivo não encontrado.");
+                Environment.Exit(1);
             }
         }
     }
