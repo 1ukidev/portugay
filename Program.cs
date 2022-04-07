@@ -15,7 +15,7 @@ namespace Portugay
             if(file == null || file.Length == 0)
             {
                 Console.WriteLine("Nenhum arquivo foi passado.");
-                Environment.Exit(0);
+                Environment.Exit(1);
             }
 
             // Guardar o caminho do arquivo
