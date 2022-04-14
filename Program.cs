@@ -46,6 +46,7 @@ namespace Portugay
                 text = text.Insert(0, "#include <iostream>\n#include <stdlib.h>\n\nusing namespace std;\n\n");
 
                 // Substituir o código pelo equivalente em C++
+                
                 // Função principal
                 text = text.Replace("iniciar", "int main(void) {");
                 text = text.Replace("terminar", "}");
