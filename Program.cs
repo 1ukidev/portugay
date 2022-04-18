@@ -76,7 +76,7 @@ namespace Portugay
                 if(System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/g++", Arguments = "-O3 -pipe " + path + " -o " + filename }; 
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/usr/bin/g++", Arguments = "-O3 -pipe " + path + " -o " + filename }; 
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
