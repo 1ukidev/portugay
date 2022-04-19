@@ -48,23 +48,23 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 
 ---
 
-| Comandos disponíveis | Equivalente em C++            |
-| -------------------  | ----------------------------- |
-| ``iniciar``          | ``int main(void) {``          |
-| ``terminar``         | ``}``                         |
-| ``inteiro``          | ``int``                       |
-| ``real``             | ``float``                     |
-| ``vazio``            | ``void``                      |
-| ``caractere``        | ``char``                      |
-| ``escreva``          | ``cout <<``                   |
-| ``leia``             | ``cin >>``                    |
-| ``retornar``         | ``return``                    |
-| ``para``             | ``for``                       |
-| ``enquanto``         | ``while``                     |
-| ``faca``             | ``do``                        |
-| ``se``               | ``if``                        |
-| ``senao``            | ``else``                      |
-| ``sistema()``        | ``system()``                  |
+| Palavras-chave disponíveis | Equivalente em C++            |
+| -------------------------- | ----------------------------- |
+| ``iniciar``                | ``int main(void) {``          |
+| ``terminar``               | ``}``                         |
+| ``inteiro``                | ``int``                       |
+| ``real``                   | ``float``                     |
+| ``vazio``                  | ``void``                      |
+| ``caractere``              | ``char``                      |
+| ``escreva``                | ``cout <<``                   |
+| ``leia``                   | ``cin >>``                    |
+| ``retornar``               | ``return``                    |
+| ``para``                   | ``for``                       |
+| ``enquanto``               | ``while``                     |
+| ``faca``                   | ``do``                        |
+| ``se``                     | ``if``                        |
+| ``senao``                  | ``else``                      |
+| ``sistema()``              | ``system()``                  |
  
 ---
 
