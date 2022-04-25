@@ -76,18 +76,20 @@ namespace Portugay
                 if(System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "g++", Arguments = "-O3 -pipe " + path + " -o " + filename }; 
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "g++", Arguments = "-O2 -pipe " + path + " -o " + filename };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
+                    Environment.Exit(proc.ExitCode);
                 }
                 else
                 {
                     // Windows
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -O3 -pipe " + path + " -o " + filename + ".exe" };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C g++ -O2 -pipe " + path + " -o " + filename + ".exe" };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
+                    Environment.Exit(proc.ExitCode);
                 }
             }
             else
