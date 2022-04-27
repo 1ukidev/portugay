@@ -65,7 +65,9 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 | ``se``                     | ``if``                        |
 | ``senao``                  | ``else``                      |
 | ``sistema()``              | ``system()``                  |
- 
+
+**Em breve mais palavras-chave...**
+
 ---
 
 ### Como compilar o projeto:
