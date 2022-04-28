@@ -70,7 +70,9 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 | ``pausar``                 | ``break``                     |
 | ``continuar``              | ``continue``                  |
 | ``sistema()``              | ``system()``                  |
- 
+
+**Em breve mais palavras-chave...**
+
 ---
 
 ### Como compilar o projeto:
