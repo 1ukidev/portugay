@@ -46,29 +46,27 @@ namespace Portugay
                 text = text.Insert(0, "#include <iostream>\n#include <stdlib.h>\n\nusing namespace std;\n\n");
 
                 // Substituir o código pelo equivalente em C++
-                
-                // Função principal
-                text = text.Replace("iniciar", "int main(void) {");
-                text = text.Replace("terminar", "}");
-                // Variáveis
-                text = text.Replace("inteiro", "int");
-                text = text.Replace("real", "float");
-                text = text.Replace("vazio", "void");
+                text = text.Replace("iniciar",   "int main(void) {");
+                text = text.Replace("terminar",  "}");
+                text = text.Replace("inteiro",   "int");
+                text = text.Replace("real",      "float");
+                text = text.Replace("vazio",     "void");
                 text = text.Replace("caractere", "char");
-                // Entrada / Saída
-                text = text.Replace("escreva", "cout <<");
-                text = text.Replace("leia", "cin >>");
-                text = text.Replace("retornar", "return");
-                // Estruturas de repetição
-                text = text.Replace("para", "for");
-                text = text.Replace("enquanto", "while");
-                text = text.Replace("faca", "do");
-                // Estruturas de decisão
-                text = text.Replace("se", "if");
-                text = text.Replace("senao", "else");
-                // Funções
-                text = text.Replace("sistema", "system");
-
+                text = text.Replace("escrever",  "cout <<");
+                text = text.Replace("leia",      "cin >>");
+                text = text.Replace("para",      "for");
+                text = text.Replace("enquanto",  "while");
+                text = text.Replace("faca",      "do");
+                text = text.Replace("se",        "if");
+                text = text.Replace("senao",     "else");
+                text = text.Replace("escolha",   "switch");
+                text = text.Replace("caso",      "case");
+                text = text.Replace("outrocaso", "default");
+                text = text.Replace("retornar",  "return");
+                text = text.Replace("pausar",    "break");
+                text = text.Replace("continuar", "continue");
+                text = text.Replace("sistema",   "system");
+                
                 // Escrever no novo arquivo
                 File.WriteAllText(path, text);
                 

@@ -56,14 +56,19 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 | ``real``                   | ``float``                     |
 | ``vazio``                  | ``void``                      |
 | ``caractere``              | ``char``                      |
-| ``escreva``                | ``cout <<``                   |
+| ``escrever``               | ``cout <<``                   |
 | ``leia``                   | ``cin >>``                    |
-| ``retornar``               | ``return``                    |
 | ``para``                   | ``for``                       |
 | ``enquanto``               | ``while``                     |
 | ``faca``                   | ``do``                        |
 | ``se``                     | ``if``                        |
 | ``senao``                  | ``else``                      |
+| ``escolha``                | ``switch``                    |
+| ``caso``                   | ``case``                      |
+| ``outrocaso``              | ``default``                   |
+| ``retornar``               | ``return``                    |
+| ``pausar``                 | ``break``                     |
+| ``continuar``              | ``continue``                  |
 | ``sistema()``              | ``system()``                  |
  
 ---
