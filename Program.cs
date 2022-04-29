@@ -35,6 +35,17 @@ namespace Portugay
                     Environment.Exit(1);
                 }
 
+                // Remover comentários
+                string regex = @"(@(?:""[^""]*"")+|""(?:[^""\n\\]+|\\.)*""|'(?:[^'\n\\]+|\\.)*')|//.*|/\*(?s:.*?)\*/";
+                text = Regex.Replace(text, regex, "$1");
+
+                // Verificar se o arquivo possui a função principal
+                if(!text.Contains("iniciar") || !text.Contains("terminar"))
+                {
+                    Console.WriteLine("O arquivo não contém a função principal.\nAdicione 'iniciar' e 'terminar' ao código-fonte.");
+                    Environment.Exit(1);
+                }
+
                 // Guadar nome do arquivo
                 string filename = Path.GetFileNameWithoutExtension(path);
 
@@ -74,10 +85,6 @@ namespace Portugay
                 text = text.Replace("pausar",    "break");
                 text = text.Replace("continuar", "continue");
                 text = text.Replace("sistema",   "system");
-                
-                // Remover comentários
-                string regex = @"(@(?:""[^""]*"")+|""(?:[^""\n\\]+|\\.)*""|'(?:[^'\n\\]+|\\.)*')|//.*|/\*(?s:.*?)\*/";
-                text = Regex.Replace(text, regex, "$1");
 
                 // Escrever no novo arquivo
                 File.WriteAllText(path, text);
