@@ -15,7 +15,7 @@ O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila 
 Exemplo de código:
 ```
 iniciar
-    escreva "Hello, World!\n";
+    escrever "Hello, World!\n";
 terminar
 ```
 
