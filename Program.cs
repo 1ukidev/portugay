@@ -26,6 +26,13 @@ namespace Portugay
             {
                 // Ler o código
                 string text = File.ReadAllText(path);
+                
+                // Verificar se o arquivo está vazio
+                if(text == null || text.Length == 0)
+                {
+                    Console.WriteLine("O arquivo está vazio.");
+                    Environment.Exit(1);
+                }
 
                 // Guadar nome do arquivo
                 string filename = Path.GetFileNameWithoutExtension(path);
