@@ -8,7 +8,7 @@ O código ainda é simples, não leve o projeto a sério.
 ---
 
 ### Funcionamento:
-O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando GCC.
+O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando Clang.
 
 ---
 
@@ -19,7 +19,7 @@ iniciar
 terminar
 ```
 
-Usar o programa para traduzir e compilar (necessário ter o GCC instalado):
+Usar o programa para traduzir e compilar (necessário ter o Clang instalado):
 ```
 .\Portugay.exe <arquivo>
 ```
