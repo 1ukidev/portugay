@@ -4,6 +4,7 @@
 using System;
 using System.IO;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Portugay
 {
@@ -74,6 +75,10 @@ namespace Portugay
                 text = text.Replace("continuar", "continue");
                 text = text.Replace("sistema",   "system");
                 
+                // Remover comentários
+                string regex = @"(@(?:""[^""]*"")+|""(?:[^""\n\\]+|\\.)*""|'(?:[^'\n\\]+|\\.)*')|//.*|/\*(?s:.*?)\*/";
+                text = Regex.Replace(text, regex, "$1");
+
                 // Escrever no novo arquivo
                 File.WriteAllText(path, text);
                 
