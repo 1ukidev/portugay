@@ -74,7 +74,7 @@ namespace Portugay
                 if(System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang++", Arguments = "-O2 -pipe -march=native " + path + " -o " + filename };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang++", Arguments = "-O2 -pipe -march=native -Wall " + path + " -o " + filename };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
@@ -83,7 +83,7 @@ namespace Portugay
                 else
                 {
                     // Windows
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C clang++ -O2 -pipe -march=native " + path + " -o " + filename + ".exe" };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C clang++ -O2 -pipe -march=native -Wall " + path + " -o " + filename + ".exe" };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
