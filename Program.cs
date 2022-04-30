@@ -19,8 +19,8 @@ namespace Portugay
                 Environment.Exit(1);
             }
 
-            // Exibir ajuda ao passar o argumento --help ou -h
-            if (file[0] == "--help" || file[0] == "-h") {
+            // Exibir ajuda ao passar o argumento --help, -h ou -?
+            if (file[0] == "--help" || file[0] == "-h" || file[0] == "-?") {
                 Console.WriteLine(@"Um programa inspirado no Portugol para fins educacionais.
                     
 Funcionamento: O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando o Clang.
