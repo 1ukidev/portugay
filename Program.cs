@@ -12,24 +12,30 @@ namespace Portugay
     {
         static void Main(string[] file)
         {
-            // Verificar se o argumento foi passado
-            if(file == null || file.Length == 0)
+            // Verificar se algum argumento foi passado
+            if (file == null || file.Length == 0)
             {
-                Console.WriteLine("Nenhum arquivo foi passado.");
+                Console.WriteLine("Nenhum arquivo foi passado.\nTente 'Portugay --help' para mais informações.");
                 Environment.Exit(1);
+            }
+
+            // Exibir ajuda ao passar o argumento --help ou -h
+            if (file[0] == "--help" || file[0] == "-h") {
+                Console.WriteLine("Um programa inspirado no Portugol para fins educacionais.\n\nFunciomanento: O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando o Clang.\n\nUso:\n  Portugay <arquivo>\n\nExemplo:\n  Portugay teste.p\n\nO arquivo com código traduzido ficará salvo em <nome do arquivo>.cpp\n\nAcesse: https://github.com/1ukidev/portugay");
+                Environment.Exit(0);
             }
 
             // Guardar o caminho do arquivo
             string path = Path.GetFullPath(file[0]);
  
             // Verificar se o arquivo existe
-            if(File.Exists(file[0]))
+            if (File.Exists(file[0]))
             {
                 // Ler o código
                 string text = File.ReadAllText(path);
                 
                 // Verificar se o arquivo está vazio
-                if(text == null || text.Length == 0)
+                if (text == null || text.Length == 0)
                 {
                     Console.WriteLine("O arquivo está vazio.");
                     Environment.Exit(1);
@@ -40,7 +46,7 @@ namespace Portugay
                 text = Regex.Replace(text, regex, "$1");
 
                 // Verificar se o arquivo possui a função principal
-                if(!text.Contains("iniciar") || !text.Contains("terminar"))
+                if (!text.Contains("iniciar") || !text.Contains("terminar"))
                 {
                     Console.WriteLine("O arquivo não contém a função principal.\nAdicione 'iniciar' e 'terminar' ao código-fonte.");
                     Environment.Exit(1);
@@ -50,7 +56,7 @@ namespace Portugay
                 string filename = Path.GetFileNameWithoutExtension(path);
 
                 // Criar arquivo que receberá o código C++
-                if(System.OperatingSystem.IsLinux())
+                if (System.OperatingSystem.IsLinux())
                 {
                     // Linux
                     path = Path.GetDirectoryName(path) + "/" + filename + ".cpp";
@@ -90,7 +96,7 @@ namespace Portugay
                 File.WriteAllText(path, text);
                 
                 // Compilar usando o Clang
-                if(System.OperatingSystem.IsLinux())
+                if (System.OperatingSystem.IsLinux())
                 {
                     // Linux
                     ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang++", Arguments = "-O2 -pipe -march=native -Wall " + path + " -o " + filename };
