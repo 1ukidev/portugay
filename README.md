@@ -56,8 +56,8 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 | ``real``                   | ``float``                     |
 | ``vazio``                  | ``void``                      |
 | ``caractere``              | ``char``                      |
-| ``escrever``               | ``cout <<``                   |
-| ``leia``                   | ``cin >>``                    |
+| ``escrever``               | ``cout <<`` ``(iostream)``    |
+| ``leia``                   | ``cin >>`` ``(iostream)``     |
 | ``para``                   | ``for``                       |
 | ``enquanto``               | ``while``                     |
 | ``faca``                   | ``do``                        |
@@ -69,7 +69,7 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 | ``retornar``               | ``return``                    |
 | ``pausar``                 | ``break``                     |
 | ``continuar``              | ``continue``                  |
-| ``sistema()``              | ``system()``                  |
+| ``sistema``                | ``system`` ``(stdlib.h)``     |
 
 **Em breve mais palavras-chave...**
 
