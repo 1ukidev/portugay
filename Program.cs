@@ -53,7 +53,7 @@ Acesse: https://github.com/1ukidev/portugay");
                 }
 
                 // Remover comentários
-                string regex = @"(@(?:""[^""]*"")+|""(?:[^""\n\\]+|\\.)*""|'(?:[^'\n\\]+|\\.)*')|//.*|/\*(?s:.*?)\*/";
+                const string regex = @"(@(?:""[^""]*"")+|""(?:[^""\n\\]+|\\.)*""|'(?:[^'\n\\]+|\\.)*')|//.*|/\*(?s:.*?)\*/";
                 text = Regex.Replace(text, regex, "$1");
 
                 // Verificar se o arquivo possui a função principal
