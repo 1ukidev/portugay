@@ -21,18 +21,14 @@ namespace Portugay
 
             // Exibir ajuda ao passar o argumento --help, -h ou -?
             if (file[0] == "--help" || file[0] == "-h" || file[0] == "-?") {
-                Console.WriteLine(@"Um programa inspirado no Portugol para fins educacionais.
-                    
-Funcionamento: O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando o Clang.
-
-Uso:
-  Portugay <arquivo>
-Exemplo:
-  Portugay teste.p
-
-O arquivo com código traduzido ficará salvo em <nome do arquivo>.cpp
-
-Acesse: https://github.com/1ukidev/portugay");
+                Console.WriteLine("Um programa inspirado no Portugol para fins educacionais.\n");
+                Console.WriteLine("Funcionamento: O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando o Clang.\n");
+                Console.WriteLine("Uso: ");
+                Console.WriteLine("  Portugay <arquivo>");
+                Console.WriteLine("Exemplo: ");
+                Console.WriteLine("  Portugay teste.p\n");
+                Console.WriteLine("O arquivo com código traduzido ficará salvo em <nome do arquivo>.cpp\n");
+                Console.WriteLine("Acesse https://github.com/1ukidev/portugay para mais informações.");
                 Environment.Exit(0);
             }
 
