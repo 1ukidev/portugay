@@ -110,7 +110,7 @@ Acesse: https://github.com/1ukidev/portugay");
                 if (System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang++", Arguments = "-O2 -pipe -march=native -Wall -Wextra " + path + " -o " + filename };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang++", Arguments = "-O2 -pipe -Wall -Wextra " + path + " -o " + filename };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
@@ -119,7 +119,7 @@ Acesse: https://github.com/1ukidev/portugay");
                 else
                 {
                     // Windows
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C clang++ -O2 -pipe -march=native -Wall -Wextra " + path + " -o " + filename + ".exe" };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C clang++ -O2 -pipe -Wall -Wextra " + path + " -o " + filename + ".exe" };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
