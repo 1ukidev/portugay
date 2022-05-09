@@ -76,7 +76,7 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
 ---
 
 ### Como compilar o projeto:
-- Certifique-se de ter instalado o .NET SDK
+- Certifique-se de ter instalado o .NET SDK 6
 
 Abra um terminal e clone este repositório (necessário ter o git instalado):
 ```
