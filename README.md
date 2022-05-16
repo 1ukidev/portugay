@@ -14,7 +14,7 @@ O programa recebe o texto, traduz para C em um novo arquivo e por fim compila-o 
 
 Exemplo de código:
 ```
-inteiro principal() {
+inteiro principal(vazio) {
     escrever("Hello, World!\n");
 }
 ```
