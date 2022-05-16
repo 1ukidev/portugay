@@ -50,7 +50,7 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.c``
 
 | Palavras-chave disponíveis | Equivalente em C              |
 | -------------------------- | ----------------------------- |
-| ``principal``              | ``main`` (função)             |
+| ``principal``              | ``main`` ``(função)``         |
 | ``inteiro``                | ``int``                       |
 | ``real``                   | ``float``                     |
 | ``vazio``                  | ``void``                      |
