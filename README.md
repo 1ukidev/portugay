@@ -8,15 +8,15 @@ Atualmente funciona no Linux e Windows.
 ---
 
 ### Funcionamento:
-O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando o Clang.
+O programa recebe o texto, traduz para C em um novo arquivo e por fim compila usando o Clang.
 
 ---
 
 Exemplo de código:
 ```
-iniciar
-    escrever "Hello, World!\n";
-terminar
+inteiro principal() {
+    escrever("Hello, World!\n");
+}
 ```
 
 Usar o programa para traduzir e compilar (necessário ter o Clang instalado):
@@ -44,20 +44,19 @@ No Linux:
 
 ---
 
-O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.cpp``
+O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.c``
 
 ---
 
-| Palavras-chave disponíveis | Equivalente em C++            |
+| Palavras-chave disponíveis | Equivalente em C              |
 | -------------------------- | ----------------------------- |
-| ``iniciar``                | ``int main(void) {``          |
-| ``terminar``               | ``}``                         |
+| ``principal``              | ``main`` (função)             |
 | ``inteiro``                | ``int``                       |
 | ``real``                   | ``float``                     |
 | ``vazio``                  | ``void``                      |
 | ``caractere``              | ``char``                      |
-| ``escrever``               | ``cout <<`` ``(iostream)``    |
-| ``leia``                   | ``cin >>`` ``(iostream)``     |
+| ``escrever``               | ``printf`` ``(stdio.h)``      |
+| ``leia``                   | ``scanf`` ``(stdio.h)``       |
 | ``para``                   | ``for``                       |
 | ``enquanto``               | ``while``                     |
 | ``faca``                   | ``do``                        |

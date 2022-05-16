@@ -22,12 +22,12 @@ namespace Portugay
             // Exibir ajuda ao passar o argumento --help, -h ou -?
             if (file[0] == "--help" || file[0] == "-h" || file[0] == "-?") {
                 Console.WriteLine("Um programa inspirado no Portugol para fins educacionais.\n");
-                Console.WriteLine("Funcionamento: O programa recebe o texto, traduz para C++ em um novo arquivo e por fim compila usando o Clang.\n");
+                Console.WriteLine("Funcionamento: O programa recebe o texto, traduz para C em um novo arquivo e por fim compila usando o Clang.\n");
                 Console.WriteLine("Uso: ");
                 Console.WriteLine("  Portugay <arquivo>");
                 Console.WriteLine("Exemplo: ");
                 Console.WriteLine("  Portugay teste.p\n");
-                Console.WriteLine("O arquivo com código traduzido ficará salvo em <nome do arquivo>.cpp\n");
+                Console.WriteLine("O arquivo com código traduzido ficará salvo em <nome do arquivo>.c\n");
                 Console.WriteLine("Acesse https://github.com/1ukidev/portugay para mais informações.");
                 Environment.Exit(0);
             }
@@ -53,39 +53,39 @@ namespace Portugay
                 text = Regex.Replace(text, regex, "$1");
 
                 // Verificar se o arquivo possui a função principal
-                if (!text.Contains("iniciar") || !text.Contains("terminar"))
+                if (!text.Contains("principal"))
                 {
-                    Console.WriteLine("O arquivo não contém a função principal.\nAdicione 'iniciar' e 'terminar' ao código-fonte.");
+                    Console.WriteLine("O código-fonte não contém a função principal.\nTente 'Portugay --help' para mais informações.");
                     Environment.Exit(1);
                 }
 
                 // Guadar nome do arquivo
                 string filename = Path.GetFileNameWithoutExtension(path);
 
-                // Criar arquivo que receberá o código C++
+                // Criar arquivo que receberá o código C
                 if (System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    path = Path.GetDirectoryName(path) + "/" + filename + ".cpp";
+                    path = Path.GetDirectoryName(path) + "/" + filename + ".c";
                 }
                 else
                 {
                     // Windows
-                    path = Path.GetDirectoryName(path) + @"\\" + filename + ".cpp";
+                    path = Path.GetDirectoryName(path) + @"\\" + filename + ".c";
                 }
 
                 // Inserir cabeçalhos e definir namespace
-                text = text.Insert(0, "#include <iostream>\n#include <stdlib.h>\n\nusing namespace std;\n\n");
+                text = text.Insert(0, "#include <stdio.h>\n#include <stdlib.h>\n\n");
 
-                // Substituir o código pelo equivalente em C++
-                text = text.Replace("iniciar",   "int main(void) {");
-                text = text.Replace("terminar",  "}");
+                // Substituir o código pelo equivalente em C
+                text = text.Replace("principal", "main");
+                text = text.Replace("incluir",   "include");
                 text = text.Replace("inteiro",   "int");
                 text = text.Replace("real",      "float");
                 text = text.Replace("vazio",     "void");
                 text = text.Replace("caractere", "char");
-                text = text.Replace("escrever",  "cout <<");
-                text = text.Replace("leia",      "cin >>");
+                text = text.Replace("escrever",  "printf");
+                text = text.Replace("leia",      "scanf");
                 text = text.Replace("para",      "for");
                 text = text.Replace("enquanto",  "while");
                 text = text.Replace("faca",      "do");
@@ -106,7 +106,7 @@ namespace Portugay
                 if (System.OperatingSystem.IsLinux())
                 {
                     // Linux
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang++", Arguments = "-O2 -pipe -Wall -Wextra " + path + " -o " + filename };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "clang", Arguments = "-O2 -pipe -Wall -Wextra -Wpedantic " + path + " -o " + filename };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
@@ -115,7 +115,7 @@ namespace Portugay
                 else
                 {
                     // Windows
-                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C clang++ -O2 -pipe -Wall -Wextra " + path + " -o " + filename + ".exe" };
+                    ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = "/C clang -O2 -pipe -Wall -Wextra -Wpedantic " + path + " -o " + filename + ".exe" };
                     Process proc = new Process() { StartInfo = startInfo };
                     proc.Start();
                     proc.WaitForExit();
