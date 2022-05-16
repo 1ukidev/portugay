@@ -3,7 +3,7 @@ Um programa inspirado no Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.<br>
 Atualmente funciona no Linux e Windows.
 
-**O código é simples e está em desenvolvimento! Várias mudanças podem ocorrer. Não leve o projeto a sério.**
+**O código é bem simples e está em desenvolvimento! Várias mudanças podem ocorrer. Não leve o projeto a sério.**
 
 ---
 
