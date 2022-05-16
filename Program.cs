@@ -124,7 +124,7 @@ namespace Portugay
             }
             else
             {
-                Console.WriteLine("Arquivo não encontrado.");
+                Console.WriteLine("Arquivo não encontrado.\nTente 'Portugay --help' para mais informações.");
                 Environment.Exit(1);
             }
         }
