@@ -22,7 +22,7 @@ namespace Portugay
             // Exibir ajuda ao passar o argumento --help, -h ou -?
             if (file[0] == "--help" || file[0] == "-h" || file[0] == "-?") {
                 Console.WriteLine("Um programa inspirado no Portugol para fins educacionais.\n");
-                Console.WriteLine("Funcionamento: O programa recebe o texto, traduz para C em um novo arquivo e por fim compila usando o Clang.\n");
+                Console.WriteLine("Funcionamento: O programa recebe o texto, traduz para C em um novo arquivo e por fim compila-o usando o Clang.\n");
                 Console.WriteLine("Uso: ");
                 Console.WriteLine("  Portugay <arquivo>");
                 Console.WriteLine("Exemplo: ");
@@ -79,7 +79,7 @@ namespace Portugay
 
                 // Substituir o código pelo equivalente em C
                 text = text.Replace("principal", "main");
-                text = text.Replace("incluir",   "include");
+                text = text.Replace("incluir",   "#include");
                 text = text.Replace("inteiro",   "int");
                 text = text.Replace("real",      "float");
                 text = text.Replace("vazio",     "void");

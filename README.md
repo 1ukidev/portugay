@@ -8,7 +8,7 @@ Atualmente funciona no Linux e Windows.
 ---
 
 ### Funcionamento:
-O programa recebe o texto, traduz para C em um novo arquivo e por fim compila usando o Clang.
+O programa recebe o texto, traduz para C em um novo arquivo e por fim compila-o usando o Clang.
 
 ---
 
@@ -51,7 +51,7 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.c``
 | Palavras-chave disponíveis | Equivalente em C              |
 | -------------------------- | ----------------------------- |
 | ``principal``              | ``main`` ``(função)``         |
-| ``incluir``                | ``#include`` (cabeçalho)      |
+| ``incluir``                | ``#include`` ``(cabeçalho)``  |
 | ``inteiro``                | ``int``                       |
 | ``real``                   | ``float``                     |
 | ``vazio``                  | ``void``                      |
