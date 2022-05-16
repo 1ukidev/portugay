@@ -48,6 +48,7 @@ O arquivo com código traduzido ficará salvo em ``<nome do arquivo>.c``
 
 ---
 
+**Aviso: atualmente por padrão o programa irá sempre adicionar a biblioteca stdio.h e stdlib.h**
 | Palavras-chave disponíveis | Equivalente em C              |
 | -------------------------- | ----------------------------- |
 | ``principal``              | ``main`` ``(função)``         |
