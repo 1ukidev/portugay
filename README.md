@@ -1,6 +1,6 @@
-Projeto descontinuado.
+**Projeto descontinuado.**
 
-Dê uma olhada em: https://github.com/1ukidev/portugay-cpp
+**Dê uma olhada em: https://github.com/1ukidev/portugay-cpp**
 
 # portugay
 Um programa inspirado no Portugol para fins educacionais.<br>
