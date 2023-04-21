@@ -1,4 +1,8 @@
-# Portugay
+Projeto descontinuado.
+
+Dê uma olhada em: https://github.com/1ukidev/portugay-cpp
+
+# portugay
 Um programa inspirado no Portugol para fins educacionais.<br>
 Desenvolvido em C# usando .NET Core.<br>
 Atualmente funciona no Linux e Windows.
